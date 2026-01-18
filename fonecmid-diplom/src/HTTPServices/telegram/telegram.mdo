@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d1ddce2e-bee1-4bac-87f9-c88001131b19">
+  <name>telegram</name>
+  <synonym>
+    <key>ru</key>
+    <value>Telegram</value>
+  </synonym>
+  <rootURL>telegram</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="8170670d-f66f-495a-81b3-d9f168455c27">
+    <name>testingPOST</name>
+    <synonym>
+      <key>ru</key>
+      <value>Testing POST</value>
+    </synonym>
+    <template>/testbottestingPOST</template>
+  </urlTemplates>
+</mdclass:HTTPService>
