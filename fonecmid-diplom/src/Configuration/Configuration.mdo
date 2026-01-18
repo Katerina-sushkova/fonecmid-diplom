@@ -659,6 +659,7 @@
   <commonModules>CommonModule.ВариантыОтчетовСлужебный</commonModules>
   <commonModules>CommonModule.ВариантыОтчетовСлужебныйКлиент</commonModules>
   <commonModules>CommonModule.ВариантыОтчетовСлужебныйКлиентСервер</commonModules>
+  <commonModules>CommonModule.ВКМ_ГрупповоеСозданиеРеализаций</commonModules>
   <commonModules>CommonModule.ВКМ_Телеграм</commonModules>
   <commonModules>CommonModule.ВнешниеПользователи</commonModules>
   <commonModules>CommonModule.ВнешниеПользователиКлиент</commonModules>
@@ -1294,6 +1295,7 @@
   <reports>Report.УниверсальныйОтчет</reports>
   <dataProcessors>DataProcessor.АвтоматическоеИзвлечениеТекстов</dataProcessors>
   <dataProcessors>DataProcessor.ВводКонтактнойИнформации</dataProcessors>
+  <dataProcessors>DataProcessor.ВКМ_МассовоеСозданиеАктов</dataProcessors>
   <dataProcessors>DataProcessor.ГрупповоеИзменениеРеквизитов</dataProcessors>
   <dataProcessors>DataProcessor.ЖурналРегистрации</dataProcessors>
   <dataProcessors>DataProcessor.ЗагрузкаДанныхИзФайла</dataProcessors>
