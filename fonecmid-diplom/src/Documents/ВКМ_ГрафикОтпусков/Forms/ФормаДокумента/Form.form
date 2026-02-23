@@ -335,6 +335,10 @@
     <dataPath xsi:type="form:DataPath">
       <segments>Объект.Год</segments>
     </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>ГодПриИзменении</name>
+    </handlers>
     <extendedTooltip>
       <name>ГодРасширеннаяПодсказка</name>
       <id>9</id>
@@ -702,6 +706,10 @@
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
   <saveWindowSettings>true</saveWindowSettings>
   <autoTitle>true</autoTitle>
   <autoUrl>true</autoUrl>

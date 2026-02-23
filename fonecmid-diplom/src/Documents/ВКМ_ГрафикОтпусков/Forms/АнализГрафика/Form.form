@@ -44,6 +44,7 @@
         <items xsi:type="form:FormField">
           <name>ДГТаблицаТочка</name>
           <id>51</id>
+          <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
@@ -83,6 +84,7 @@
         <items xsi:type="form:FormField">
           <name>ДГТаблицаТекст</name>
           <id>54</id>
+          <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
