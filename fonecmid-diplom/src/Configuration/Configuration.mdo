@@ -577,6 +577,9 @@
   <roles>Role.БазоваяФункциональностьТП</roles>
   <roles>Role.БазовыеПраваБСП</roles>
   <roles>Role.БазовыеПраваВнешнихПользователейБСП</roles>
+  <roles>Role.ВКМ_БухгалтерИТФирмы</roles>
+  <roles>Role.ВКМ_КадровикРасчетчик</roles>
+  <roles>Role.ВКМ_Менеджер</roles>
   <roles>Role.ВКМ_Специалист</roles>
   <roles>Role.ВыводНаПринтерФайлБуферОбмена</roles>
   <roles>Role.ДобавлениеИзменениеВариантовОтчетов</roles>
@@ -1229,7 +1232,6 @@
   <catalogs>Catalog.Файлы</catalogs>
   <documents>Document.ВКМ_ГрафикОтпусков</documents>
   <documents>Document.ВКМ_ЗарплатаКВыплате</documents>
-  <documents>Document.ВКМ_НачислениеЗарплаты</documents>
   <documents>Document.ВКМ_НачислениеФиксированнойПремии</documents>
   <documents>Document.ВКМ_ОбслуживаниеКлиентов</documents>
   <documents>Document.ЗаказПокупателя</documents>
@@ -1237,6 +1239,7 @@
   <documents>Document.ОплатаПоставщику</documents>
   <documents>Document.ПоступлениеТоваровУслуг</documents>
   <documents>Document.РеализацияТоваровУслуг</documents>
+  <documents>Document.ВКМ_НачислениеЗарплаты</documents>
   <documentJournals>DocumentJournal.Деньги</documentJournals>
   <enums>Enum.ВариантыОтображенияМеток</enums>
   <enums>Enum.ВариантыОчисткиФайлов</enums>

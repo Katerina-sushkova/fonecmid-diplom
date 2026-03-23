@@ -15,13 +15,53 @@
 					<v8:content>Клиент</v8:content>
 				</v8:item>
 			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_Договор</dataPath>
+			<field>ВКМ_Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКОплатеИтого</dataPath>
+			<field>СуммаКОплатеИтого</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма к оплате итого</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ВКМ_Договор</dataPath>
-			<field>ВКМ_Договор</field>
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -33,39 +73,20 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ВКМ_СуммаКОплатеОборот</dataPath>
-			<field>ВКМ_СуммаКОплатеОборот</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма к оплате всего</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Контрагент</dataPath>
-			<field>Контрагент</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Номенклатура</dataPath>
-			<field>Номенклатура</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Номенклатура</v8:content>
-				</v8:item>
-			</title>
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
 			<role>
-				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаОборот</dataPath>
-			<field>СуммаОборот</field>
+			<dataPath>СуммаКОплатеПредварительно</dataPath>
+			<field>СуммаКОплатеПредварительно</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма номенклатуры</v8:content>
+					<v8:content>Сумма к оплате предварительно</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -74,38 +95,38 @@
 	ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты.ВКМ_Клиент КАК ВКМ_Клиент,
 	ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты.ВКМ_Договор КАК ВКМ_Договор,
 	ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты.ВКМ_СуммаКОплатеОборот КАК ВКМ_СуммаКОплатеОборот
-ПОМЕСТИТЬ ВТ_Документ
+ПОМЕСТИТЬ ВТ_ОбслуживаниеКлиентов
 ИЗ
 	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.ОстаткиИОбороты КАК ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты
+
+СГРУППИРОВАТЬ ПО
+	ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты.ВКМ_Клиент,
+	ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты.ВКМ_Договор,
+	ВКМ_ВыполненныеКлиентуРаботыОстаткиИОбороты.ВКМ_СуммаКОплатеОборот
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ПродажиОбороты.Номенклатура КАК Номенклатура,
-	ПродажиОбороты.СуммаОборот КАК СуммаОборот,
-	ВКМ_НоменклатураРаботыСпециалиста.Значение КАК Значение,
-	ВТ_Документ.ВКМ_Клиент КАК ВКМ_Клиент,
-	ВТ_Документ.ВКМ_Договор КАК ВКМ_Договор,
-	ВТ_Документ.ВКМ_СуммаКОплатеОборот КАК ВКМ_СуммаКОплатеОборот
-ПОМЕСТИТЬ ВТ_Данные
+	ВТ_ОбслуживаниеКлиентов.ВКМ_Клиент КАК Клиент,
+	ВТ_ОбслуживаниеКлиентов.ВКМ_Договор КАК Договор,
+	ОстаткиТоваров.Номенклатура КАК Номенклатура,
+	ВТ_ОбслуживаниеКлиентов.ВКМ_СуммаКОплатеОборот КАК СуммаКОплатеПредварительно,
+	ОбработкаЗаказов.Регистратор КАК Регистратор,
+	ОбработкаЗаказов.СуммаОтгрузки КАК СуммаКОплатеИтого
 ИЗ
-	РегистрНакопления.Продажи.Обороты КАК ПродажиОбороты
-		ПОЛНОЕ СОЕДИНЕНИЕ Константа.ВКМ_НоменклатураРаботыСпециалиста КАК ВКМ_НоменклатураРаботыСпециалиста
-		ПО ПродажиОбороты.Номенклатура = ВКМ_НоменклатураРаботыСпециалиста.Значение,
-	ВТ_Документ КАК ВТ_Документ
-;
+	ВТ_ОбслуживаниеКлиентов КАК ВТ_ОбслуживаниеКлиентов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбработкаЗаказов КАК ОбработкаЗаказов
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОстаткиТоваров КАК ОстаткиТоваров
+			ПО ОбработкаЗаказов.Контрагент = ОстаткиТоваров.Контрагент
+		ПО ВТ_ОбслуживаниеКлиентов.ВКМ_Договор = ОбработкаЗаказов.Договор
 
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
-	ВТ_Документ.ВКМ_Клиент КАК ВКМ_Клиент,
-	ВТ_Документ.ВКМ_Договор КАК ВКМ_Договор,
-	ВТ_Документ.ВКМ_СуммаКОплатеОборот КАК ВКМ_СуммаКОплатеОборот,
-	ВТ_Данные.Номенклатура КАК Номенклатура,
-	ВТ_Данные.СуммаОборот КАК СуммаОборот
-ИЗ
-	ВТ_Документ КАК ВТ_Документ
-		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_Данные КАК ВТ_Данные
-		ПО ВТ_Документ.ВКМ_Клиент = ВТ_Данные.ВКМ_Клиент</query>
+СГРУППИРОВАТЬ ПО
+	ВТ_ОбслуживаниеКлиентов.ВКМ_Клиент,
+	ВТ_ОбслуживаниеКлиентов.ВКМ_Договор,
+	ВТ_ОбслуживаниеКлиентов.ВКМ_СуммаКОплатеОборот,
+	ОстаткиТоваров.Номенклатура,
+	ОбработкаЗаказов.Регистратор,
+	ОбработкаЗаказов.СуммаОтгрузки</query>
 	</dataSet>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -166,7 +187,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Анализ выставленных актов </v8:content>
+				<v8:content>Анализ выставленных актов</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -202,21 +223,38 @@
 						<dcsset:use>false</dcsset:use>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ВКМ_Клиент</dcsset:field>
+						<dcsset:field>Клиент</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ВКМ_Договор</dcsset:field>
-					</dcsset:item>
-					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ВКМ_СуммаКОплатеОборот</dcsset:field>
+						<dcsset:field>Договор</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
 						<dcsset:field>Номенклатура</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>СуммаОборот</dcsset:field>
+						<dcsset:field>СуммаКОплатеПредварительно</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКОплатеИтого</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Регистратор</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>

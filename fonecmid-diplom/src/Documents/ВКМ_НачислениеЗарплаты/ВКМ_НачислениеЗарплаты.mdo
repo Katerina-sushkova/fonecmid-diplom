@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="638f3ed5-bc4e-42fc-b058-9c643fdc3dff">
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4cd4bfb8-3df8-4cdf-9618-e177c0a47955">
   <producedTypes>
-    <objectType typeId="7d79651b-b30b-4c57-98cc-da2c72572bc8" valueTypeId="6bdd0c92-2bff-48e6-b93d-237cbb06ad23"/>
-    <refType typeId="3fc5483b-7021-49b6-b2f4-a29de979f6f9" valueTypeId="3c8324b1-bd9b-464e-a399-8995804622f2"/>
-    <selectionType typeId="3da20f3b-5e8a-481d-867e-98105b7bc157" valueTypeId="0b7497ad-6d28-4aa5-93ea-7810300a0a7c"/>
-    <listType typeId="72f8b5cc-7b69-4dee-b25d-85f329b4c92d" valueTypeId="937c5746-30cd-498c-9359-ded741eb3853"/>
-    <managerType typeId="8867ec8a-9ac4-4564-bcb1-9a9103733a1f" valueTypeId="577420c1-e701-4e44-a372-6917d2b5b3c3"/>
+    <objectType typeId="35667f19-8f8d-4518-9406-c785846e2b15" valueTypeId="4c1d9b8b-30a8-4f86-a888-b70a5e956c7b"/>
+    <refType typeId="25df628d-5859-4773-a04a-d44e5bf7d11a" valueTypeId="585cecbe-c649-43ce-9218-0dfcd44abe82"/>
+    <selectionType typeId="680dd850-480e-4d18-978d-c72cc96d05a5" valueTypeId="30348bc2-2f7c-4bb3-9f91-5037eac952ed"/>
+    <listType typeId="a871774c-edf9-435b-b6a3-298043bf8d40" valueTypeId="da8dd657-2361-4f00-8d25-3268bf4322d1"/>
+    <managerType typeId="dbbdc550-72f2-4cbf-8cc1-f3e74d3ab162" valueTypeId="b67f66d0-9ab0-4aed-a8a3-0f5c59e3a78a"/>
   </producedTypes>
   <name>ВКМ_НачислениеЗарплаты</name>
   <synonym>
@@ -27,23 +27,23 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <registerRecords>InformationRegister.ВКМ_ГрафикиОтпусковФакт</registerRecords>
   <registerRecords>CalculationRegister.ВКМ_ОсновныеНачисления</registerRecords>
   <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
   <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
-  <registerRecords>InformationRegister.ВКМ_ГрафикиОтпусковФакт</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
-  <tabularSections uuid="8fcadcc6-e11c-4db6-846c-8134142b26ff">
+  <tabularSections uuid="c95ecbd2-0952-4981-a0f1-77163563bcf4">
     <producedTypes>
-      <objectType typeId="82d81433-d7c3-4a49-bd70-fc29caedbefc" valueTypeId="1a1df468-dc7d-4fd9-805b-39ef8af93ec5"/>
-      <rowType typeId="b53e92a1-b837-4567-9f22-10d622f9e488" valueTypeId="dcc36cda-741b-4836-b9b7-d8b985b37133"/>
+      <objectType typeId="8fd13fd6-b361-4702-9943-ed1335b073c4" valueTypeId="30560996-ee4a-4eaf-8005-8b1cba0d6855"/>
+      <rowType typeId="4e282448-342d-447c-bede-b030f11494ef" valueTypeId="aa173d88-7fce-41de-961f-0a845866df9b"/>
     </producedTypes>
     <name>Начисления</name>
     <synonym>
       <key>ru</key>
       <value>Начисления</value>
     </synonym>
-    <attributes uuid="05586125-5b4f-4c58-9a7b-a5358da60684">
+    <attributes uuid="7a35d031-50c6-4075-8aa3-f22a49fc37cb">
       <name>Сотрудник</name>
       <synonym>
         <key>ru</key>
@@ -57,7 +57,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="3487cfa9-0348-47ae-9603-21c5750e2f2d">
+    <attributes uuid="8f73bf23-ddc2-4b4b-babd-4c0d8900879f">
       <name>ВидРасчета</name>
       <synonym>
         <key>ru</key>
@@ -73,7 +73,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="ada29fcf-a73a-4d83-a2d7-9fb4b02b0681">
+    <attributes uuid="0eaf2704-4080-41f2-bed7-5297bb37983e">
       <name>ДатаНачала</name>
       <synonym>
         <key>ru</key>
@@ -90,7 +90,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="b16b36e5-633b-40ec-9b6e-5b6306a161de">
+    <attributes uuid="e4c06703-af4e-4cd5-a097-4c11491e0765">
       <name>ДатаОкончания</name>
       <synonym>
         <key>ru</key>
@@ -107,7 +107,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="44382c34-0b21-42cf-b910-45a1e7bd42a9">
+    <attributes uuid="92b65fc8-5828-45ae-94e1-c875ae227d22">
       <name>ГрафикРаботы</name>
       <synonym>
         <key>ru</key>
